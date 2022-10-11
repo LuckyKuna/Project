@@ -1,0 +1,49 @@
+.container {
+    .row {
+        margin-bottom: 56px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 32px;
+        }
+
+        .title_block {
+            width: 75%;
+
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+
+            .title {
+                font-family: Days One;
+                font-size: var(--title-size);
+            }
+
+            .sub_title {
+                margin-top: 6px;
+                line-height: 1.5em;
+
+                p {
+                    margin: 0;
+                }
+
+                @media (max-width: 991px) {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+#map {
+    @media (max-width: 991px) {
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: 720px;
+        margin-right: auto;
+        margin-left: auto;
+
+        iframe {
+            height: 329px;
+        }
+    }
+}

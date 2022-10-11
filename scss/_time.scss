@@ -1,0 +1,82 @@
+.row {
+    width: 100%;
+
+    @media (max-width: 991px) {
+        flex-direction: column-reverse;
+    }
+
+    .image {
+        width: 46%;
+        align-self: center;
+        position: relative;
+
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+
+        .time_logo {
+            height: 100%;
+            float: right;
+
+            @media (max-width: 991px) {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .action {
+            display: flex;
+            position: absolute;
+            bottom: 37px;
+            left: calc(100% + 61px);
+
+            @media (max-width: 991px) {
+                bottom: unset;
+                left: unset;
+                top: calc(100% + 30px);
+            }
+
+            .link {
+                @include install;
+            }
+
+            .play {
+                width: 58px;
+                height: 53px;
+                background-color: $black;
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 54%;
+        padding-left: 61px;
+
+        @media (max-width: 991px) {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        .logo {}
+
+        .title {
+            font-family: Days One;
+            font-size: var(--time-title);
+            margin-top: 25px;
+            margin-bottom: 68px;
+
+            @media (max-width: 991px) {
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

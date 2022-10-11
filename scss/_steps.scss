@@ -1,0 +1,118 @@
+.container {
+    color: $white;
+
+    .row {
+        .title_block {
+            width: 64%;
+            margin-top: 65px;
+            margin-bottom: 32px;
+            padding-right: 35px;
+
+            @media (max-width: 991px) {
+                margin-top: 100px;
+                width: 100%;
+                padding-right: 0px;
+                margin-bottom: 58px;
+            }
+
+            .title {
+                font-family: Days One;
+                font-size: var(--title-size);
+            }
+
+            .sub_title {
+                line-height: 25px;
+                margin-top: 6px;
+
+                @media (max-width: 991px) {
+                    margin-top: 12px;
+                }
+            }
+        }
+
+        .stages {
+            @media (max-width: 767px) {
+                margin-bottom: 59px;
+            }
+
+            .item {
+                display: flex;
+                margin-bottom: 71px;
+                align-items: center;
+
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-bottom: 18px;
+                }
+
+                &:nth-child(2n) {
+                    justify-content: end;
+
+                    .icon {
+                        -webkit-transform: scaleX(-1);
+                        transform: scaleX(-1);
+                        right: 15% !important;
+                    }
+
+                }
+
+                &:last-child {
+                    .icon {
+                        display: none;
+                    }
+                }
+
+                .image {
+                    img {
+                        @media (max-width: 991px) {
+                            width: 215px;
+                        }
+                    }
+
+                    .icon {
+                        position: absolute;
+                        left: 15%;
+                        margin-top: 41px;
+
+                        @media (max-width: 1199px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .caption {
+                    margin-left: 41px;
+                    width: 41.5%;
+
+                    @media (max-width: 1199px) {
+                        width: auto;
+                    }
+
+                    @media (max-width: 767px) {
+                        margin: 12px 0;
+                    }
+
+                    .title {
+                        font-family: Days One;
+                        font-size: var(--steps-title);
+                        margin-bottom: 6px;
+                    }
+
+                    .desc {
+                        margin: 0;
+
+                        li {
+                            margin-bottom: 1em;
+                            line-height: 1.5em;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

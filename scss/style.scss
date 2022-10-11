@@ -1,0 +1,287 @@
+@import "fonts";
+
+@mixin install {
+    width: 201px;
+    height: 53px;
+    background-color: $blue;
+    color: $white;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0;
+    border: none;
+    float: left;
+    display: flex;
+    padding-left: 28px;
+    align-items: center;
+
+    &::after {
+        content: "";
+        background: url(../images/Vector.svg) no-repeat center;
+        position: relative;
+        width: 20px;
+        height: 15px;
+        margin-left: 13px;
+        transition: 0.5s;
+    }
+
+    &:hover {
+        background-color: $black;
+
+        &::after {
+            margin-left: 23px;
+        }
+    }
+}
+
+$blue: #2a42cc;
+$black: #181818;
+$white: #ffffff;
+
+:root {
+    --font-size: 15px; //10 
+
+    --header-list: 16px;
+    --title-size: 41px; //25
+
+    --promo-title: 110px; //83 70 61 53
+    --promo-text: 18px; //11
+
+    --benefit-title: 23px; //19
+    --benefit-text: 14px; //11
+    --learn-more: 15px;
+
+    --card-title: 27px; //17
+    --card-button: 22px; //18
+
+    --news-title: 22px; //17
+    --news-date: 14px; //10
+
+    --steps-title: 26px; //16
+
+    --time-title: 60px; //   55 45 35 30
+
+    --form-title: 17px;
+    --form-text: 15px;
+
+    --footer-title: 22px;
+    --footer-text: 16px;
+
+    @media (max-width: 1399px) {
+        --font-size: 13.75px;
+
+        --title-size: 37px;
+
+        --promo-title: 83px;
+        --promo-text: 16.25px;
+
+        --benefit-title: 22px;
+        --benefit-text: 13.25px;
+
+        --card-title: 24.5px;
+        --card-button: 21px;
+
+        --news-title: 20.75px;
+        --news-date: 13px;
+
+        --steps-title: 23.5px;
+
+        --time-title: 55px;
+    }
+
+    @media (max-width: 1199px) {
+        --font-size: 12.5px;
+
+        --title-size: 33px;
+
+        --promo-title: 70px;
+        --promo-text: 14.5px;
+
+        --benefit-title: 21px;
+        --benefit-text: 12.5px;
+
+        --card-title: 22px;
+        --card-button: 20px;
+
+        --news-title: 19.5px;
+        --news-date: 12px;
+
+        --steps-title: 20.5px;
+
+        --time-title: 45px;
+    }
+
+    @media (max-width: 991px) {
+        --font-size: 11.25px;
+
+        --title-size: 29px;
+
+        --promo-title: 61px;
+        --promo-text: 12.75px;
+
+        --benefit-title: 20px;
+        --benefit-text: 11.75px;
+
+        --card-title: 19.5px;
+        --card-button: 19px;
+
+        --news-title: 18.25px;
+        --news-date: 11px;
+
+        --steps-title: 18.5px;
+
+        --time-title: 35px;
+    }
+
+    @media (max-width: 767px) {
+        --font-size: 10px;
+
+        --title-size: 25px;
+
+        --promo-title: 53px;
+        --promo-text: 11px;
+
+        --benefit-title: 19px;
+        --benefit-text: 11px;
+
+        --card-title: 17px;
+        --card-button: 18px;
+
+        --news-title: 17px;
+        --news-date: 10px;
+
+        --steps-title: 16px;
+
+        --time-title: 30px;
+    }
+}
+
+.container,
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.row {
+    margin: 0;
+}
+
+.row>* {
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: "Montserrat";
+    font-size: var(--font-size);
+    color: $black;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: fixed;
+        background-color: #ffffff;
+        padding: 3px 0;
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+        @import "header";
+    }
+
+    .main {
+        overflow: hidden;
+
+        .promo {
+            position: relative;
+            margin-bottom: 111px;
+            height: 852px;
+            @import "promo";
+
+            @media (max-width: 991px) {
+                height: 58vh;
+                margin-bottom: 172px;
+            }
+        }
+
+        .benefits {
+            background: linear-gradient(0deg, rgb(255, 255, 255) 23.5%, rgb(24, 24, 24) 23.5%, rgb(24, 24, 24) 76.85%, rgb(255, 255, 255) 76.85%);
+            @import "benefits";
+
+            @media (max-width: 1667px) {
+                background: linear-gradient(0deg, rgba(255, 255, 255, 1) 27.5%, rgba(24, 24, 24, 1) 27.5%, rgba(24, 24, 24, 1) 81.25%, rgba(255, 255, 255, 1) 81.25%);
+            }
+
+            @media (max-width: 1399px) {
+                background: linear-gradient(0deg, rgba(255, 255, 255, 1) 28%, rgba(24, 24, 24, 1) 28%, rgba(24, 24, 24, 1) 83.75%, rgba(255, 255, 255, 1) 83.75%);
+            }
+
+            @media (max-width: 1250px) {
+                background: linear-gradient(0deg, rgb(255, 255, 255) 32.5%, rgb(24, 24, 24) 32.5%, rgb(24, 24, 24) 86.45%, rgb(255, 255, 255) 86.45%);
+            }
+
+            @media (max-width: 1199px) {
+                background: linear-gradient(0deg, rgb(255, 255, 255) 33.5%, rgb(24, 24, 24) 33.5%, rgb(24, 24, 24) 88.1%, rgb(255, 255, 255) 88.1%);
+            }
+
+            @media (max-width: 991px) {
+                background: linear-gradient(0deg, rgb(255, 255, 255) 17.6%, rgb(24, 24, 24) 17.6%, rgb(24, 24, 24) 84.8%, rgb(255, 255, 255) 84.8%);
+            }
+
+            @media (max-width: 767px) {
+                background: linear-gradient(0deg, rgba(255, 255, 255, 1) 20%, rgba(24, 24, 24, 1) 20%, rgba(24, 24, 24, 1) 87%, rgba(255, 255, 255, 1) 87%);
+            }
+
+            @media (max-width: 663px) {
+                background: linear-gradient(0deg, rgb(255, 255, 255) 28.6%, rgb(24, 24, 24) 28.6%, rgb(24, 24, 24) 90.7%, rgb(255, 255, 255) 90.7%);
+            }
+        }
+
+        .news {
+            position: relative;
+            margin-top: 109px;
+            @import "news";
+
+            @media (max-width: 991px) {
+                margin-top: 85px;
+            }
+        }
+
+        .steps {
+            margin-top: 100px;
+            background-color: $black;
+            @import "steps";
+        }
+
+        .map {
+            margin-top: 100px;
+            @import "map";
+        }
+
+        .time {
+            margin-top: 105px;
+            @import "time";
+
+            @media (max-width: 991px) {
+                margin-top: 100px;
+            }
+        }
+
+        .form {
+            margin-top: 105px;
+            @import "form";
+
+            @media (max-width: 991px) {
+                margin-top: 188px;
+            }
+        }
+    }
+
+    .footer {
+        margin-top: 105px;
+        background-color: $black;
+        @import "footer";
+
+        @media (max-width: 991px) {
+            margin-top: 100px;
+        }
+    }
+}

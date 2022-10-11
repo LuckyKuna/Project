@@ -1,0 +1,81 @@
+.row {
+    .title_block {
+        margin-bottom: 49px;
+
+        .title {
+            font-family: Days One;
+            font-size: var(--title-size);
+        }
+
+        .sub_title {
+            margin-top: 6px;
+            width: 586px;
+
+            @media (max-width: 992px) {
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+    }
+
+    .form_area {
+        form {
+            .row {
+                justify-content: space-between;
+
+                .item {
+                    &:not(:nth-child(4)) {
+                        width: 300px;
+
+                        @media (max-width: 1199px) {
+                            width: 100%;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        margin-right: 56px;
+                    }
+
+                    label {
+                        font-family: Days One;
+                        font-size: var(--form-title);
+                        line-height: 26px;
+                    }
+
+                    .input {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid $black;
+                        padding: 11px 0;
+                        margin-top: 20px;
+                        margin-bottom: 68px;
+                        outline: none;
+                        font-size: var(--form-text);
+
+                        @media (max-width: 992px) {
+                            margin-bottom: 50px;
+                        }
+                    }
+
+                    textarea {
+                        padding-bottom: 0;
+                        resize: none;
+
+                        @media (max-width: 992px) {
+                            height: 4rem;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+
+                .submit_button {
+                    .submit {
+                        .button {
+                            @include install;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

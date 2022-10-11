@@ -1,0 +1,220 @@
+.container {
+    margin-bottom: 105px;
+
+    @media (max-width: 991px) {
+        margin-bottom: 85px;
+    }
+
+    .row {
+        .title_block {
+            font-family: Days One;
+            font-size: var(--title-size);
+            margin-bottom: 35px;
+
+            @media (max-width: 991px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1311px;
+            margin: 0 auto;
+
+            .item {
+                width: calc(33.333% - 44px);
+                background-color: $white;
+                box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15);
+                margin: 15px 0;
+                height: max-content;
+
+                @media (max-width: 991px) {
+                    width: 100%;
+                }
+
+                .image {
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .caption {
+                    margin: 20px 38px 38px 38px;
+
+                    @media (max-width: 1199px) {
+                        margin: 19px 27px 27px 27px;
+                    }
+
+                    @media (max-width: 991px) {
+                        margin: 20px 38px 38px 38px;
+                    }
+
+                    @media (max-width: 767px) {
+                        margin: 19px 27px 27px 27px;
+                    }
+
+                    .title {
+                        font-weight: 500;
+                        font-size: var(--benefit-title);
+                    }
+
+                    .description {
+                        font-size: var(--benefit-text);
+                        color: #8D8D8D;
+                        margin-top: 15px;
+                    }
+
+                    .link {
+                        a {
+                            text-decoration: none;
+                            font-weight: 700;
+                            font-size: var(--learn-more);
+                            color: $blue;
+                            display: flex;
+                            align-items: center;
+
+                            &::after {
+                                content: "";
+                                background: url(../images/arrow.svg) no-repeat center;
+                                position: relative;
+                                width: 26px;
+                                height: 26px;
+                                margin-left: 3px;
+                                transition: 0.5s;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    margin-left: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category {
+    .title_block {
+        font-family: Days One;
+        font-size: var(--title-size); // x
+        margin-bottom: 52px;
+        color: $white;
+
+        @media (max-width: 991px) {
+            margin-bottom: 19px;
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1668px;
+        justify-content: center;
+        margin: 0 auto;
+
+        .item {
+            position: relative;
+            margin: 16px;
+            max-height: 339px;
+            overflow: hidden;
+            width: 385px;
+            height: 339px;
+            z-index: 1;
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15);
+            transition: 0.5s;
+
+            @media (max-width: 991px) {
+                width: 300px;
+                height: 260px;
+                margin: 15px;
+            }
+
+            &:hover {
+                background: $blue;
+
+                img {
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+
+                .data {
+                    display: flex;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .data {
+                display: none;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding-top: 60px;
+                text-align: center;
+                flex-direction: column;
+
+                @media (max-width: 991px) {
+                    padding-top: 36px;
+                }
+
+                .title {
+                    display: flex;
+                    font-weight: 700;
+                    font-size: var(--card-title);
+                    color: $white;
+                    padding: 0 40px;
+                    height: 150px;
+
+                    p {
+                        margin: auto;
+                    }
+                }
+
+                .link {
+                    align-self: center;
+                    font-weight: 500;
+                    font-size: var(--card-button);
+                    width: 201px;
+                    height: 53px;
+                    background-color: $white;
+
+                    a {
+                        text-decoration: none;
+                        color: $blue;
+                        line-height: 53px;
+                        display: flex;
+                        padding-left: 28px;
+                        align-items: center;
+
+                        &::after {
+                            content: "";
+                            background: url(../images/Vector_blue.svg) no-repeat center;
+                            position: relative;
+                            width: 20px;
+                            height: 15px;
+                            margin-left: 13px;
+                            transition: 0.5s;
+                        }
+
+                        &:hover {
+                            &::after {
+                                margin-left: 23px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
