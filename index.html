@@ -550,7 +550,7 @@
                                     оптимальне рішення, фахівцям з автоматизації необхідно бути в курсі
                                     останніх
                                     тенденцій в
-                                    суміжних галузях. Саме тому «IQdim» відвідує значні події, які пов’язані
+                                    суміжних галузях. Саме тому IQdim відвідує значні події, які пов’язані
                                     з
                                     новинками
                                     в
@@ -645,7 +645,7 @@
                                     оптимальне рішення, фахівцям з автоматизації
                                     необхідно бути в курсі останніх
                                     тенденцій в
-                                    суміжних галузях. Саме тому «IQdim» відвідує значні
+                                    суміжних галузях. Саме тому IQdim відвідує значні
                                     події, які пов’язані з новинками
                                     в
                                     інженерії. На початку цього року...
@@ -721,10 +721,10 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev side_controls" href="#recipeCarousel" role="button"
-                        data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a>
-                    <a class="carousel-control-next side_controls" href="#recipeCarousel" role="button"
-                        data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> </a>
+                    <a class="control-prev side_controls" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a>
+                    <a class="control-next side_controls" href="#recipeCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span> </a>
                 </div>
             </div>
         </div>
@@ -936,24 +936,25 @@
                         якомога швидше! </div>
                 </div>
                 <div class="form_area">
-                    <form action="./form.php" method="post" enctype="multipart/form-data">
+                    <form action="./form.php">
                         <div class="row">
                             <div class="item">
-                                <label>Ім’я</label><input type="text" class="input" name="your-name" value="" size="40"
-                                    aria-required="true" aria-invalid="false" placeholder="Роман">
+                                <label>Ім’я</label>
+                                <input type="text" class="input" name="your-name" required="true" placeholder="Роман">
                             </div>
                             <div class="item">
                                 <label>Електроннна пошта</label>
-                                <input type="email" class="input" name="your-email" value="" size="40"
-                                    aria-required="true" aria-invalid="false" placeholder="roman.grytsenko@gmail.com">
+                                <input type="email" class="input" name="your-email" required="true"
+                                    placeholder="roman.grytsenko@gmail.com">
                             </div>
                             <div class="item">
-                                <label>Тема</label><input type="text" class="input" name="your-subject" value=""
-                                    size="40" aria-required="true" aria-invalid="false" placeholder="Зустріч">
+                                <label>Тема</label>
+                                <input type="text" class="input" name="your-subject" required="true"
+                                    placeholder="Зустріч">
                             </div>
                             <div class="col-lg-12 item">
                                 <label>Текст повідомлення</label>
-                                <textarea name="your-message" class="input" cols="1" rows="1" aria-invalid="false"
+                                <textarea name="your-message" class="input" cols="1" rows="1"
                                     placeholder="Підкажіть, будь ласка, чи можемо ми домовитися про зустріч..."></textarea>
                             </div>
                             <div class="submit_button">

@@ -55,6 +55,7 @@ $white: #ffffff;
 
     --news-title: 22px; //17
     --news-date: 14px; //10
+    --news-link: 15px;
 
     --steps-title: 26px; //16
 
@@ -246,9 +247,13 @@ body {
         }
 
         .steps {
-            margin-top: 100px;
+            margin-top: 167px;
             background-color: $black;
             @import "steps";
+
+                        @media (max-width: 991px) {
+            margin-top: 127px;
+            }
         }
 
         .map {
