@@ -13,9 +13,7 @@
 
     #recipeCarousel {
         .carousel-inner {
-            @media (max-width: 991px) {
-                overflow: visible;
-            }
+            overflow: hidden;
 
             .carousel-item.active,
             .carousel-item-next,

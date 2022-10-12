@@ -978,10 +978,8 @@ body .main .news .row .title_block {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 991px) {
-  body .main .news .row #recipeCarousel .carousel-inner {
-    overflow: visible;
-  }
+body .main .news .row #recipeCarousel .carousel-inner {
+  overflow: hidden;
 }
 body .main .news .row #recipeCarousel .carousel-inner .carousel-item.active,
 body .main .news .row #recipeCarousel .carousel-inner .carousel-item-next,
