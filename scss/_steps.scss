@@ -101,10 +101,21 @@
 
                     .desc {
                         margin: 0;
+                        padding-left: 31px;
+
+                        @media (max-width: 991px) {
+                            list-style-type: '\2022';
+                            padding-left: 7px;
+                        }
 
                         li {
+                            padding-left: 7px;
                             margin-bottom: 1em;
                             line-height: 1.5em;
+
+                            @media (max-width: 991px) {
+                                padding-left: 7px;
+                            }
 
                             &:last-child {
                                 margin-bottom: 0;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Days One";
   src: url(../fonts/DaysOne-Regular.ttf);
@@ -37,8 +38,8 @@
   --benefit-title: 23px;
   --benefit-text: 14px;
   --learn-more: 15px;
-  --card-title: 27px;
-  --card-button: 22px;
+  --card-title: 22px;
+  --card-button: 18px;
   --news-title: 22px;
   --news-date: 14px;
   --news-link: 15px;
@@ -57,8 +58,6 @@
     --promo-text: 16.25px;
     --benefit-title: 22px;
     --benefit-text: 13.25px;
-    --card-title: 24.5px;
-    --card-button: 21px;
     --news-title: 20.75px;
     --news-date: 13px;
     --steps-title: 23.5px;
@@ -73,8 +72,6 @@
     --promo-text: 14.5px;
     --benefit-title: 21px;
     --benefit-text: 12.5px;
-    --card-title: 22px;
-    --card-button: 20px;
     --news-title: 19.5px;
     --news-date: 12px;
     --steps-title: 20.5px;
@@ -89,8 +86,7 @@
     --promo-text: 12.75px;
     --benefit-title: 20px;
     --benefit-text: 11.75px;
-    --card-title: 19.5px;
-    --card-button: 19px;
+    --card-title: 17px;
     --news-title: 18.25px;
     --news-date: 11px;
     --steps-title: 18.5px;
@@ -105,8 +101,6 @@
     --promo-text: 11px;
     --benefit-title: 19px;
     --benefit-text: 11px;
-    --card-title: 17px;
-    --card-button: 18px;
     --news-title: 17px;
     --news-date: 10px;
     --steps-title: 16px;
@@ -213,9 +207,6 @@ body .header .navbar .container-fluid {
     width: 104px;
   }
 }
-body .header .navbar .container-fluid #nav > a {
-  display: none;
-}
 body .header .navbar .container-fluid .menu-button {
   width: 46px;
   height: 46px;
@@ -229,46 +220,27 @@ body .header .navbar .container-fluid .button_show {
 body .header .navbar .container-fluid .button_hide {
   background-image: url(../images/hide.svg);
 }
-body .header .navbar .container-fluid #nav .menu li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-}
-body .header .navbar .container-fluid #nav .menu li:hover ul {
+body .header .navbar .container-fluid #nav {
   display: flex;
+  margin-right: 0 !important;
+  margin-left: auto;
+}
+body .header .navbar .container-fluid #nav > a {
+  display: none;
 }
 @media (max-width: 1399px) {
-  body .header .navbar .container-fluid #nav:not(:target) > a:first-of-type,
-body .header .navbar .container-fluid #nav:target > a:last-of-type {
-    display: flex;
+  body .header .navbar .container-fluid #nav {
+    order: 3;
+    margin-left: 30px;
   }
-  body .header .navbar .container-fluid #nav > .menu {
-    height: auto;
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
+  body .header .navbar .container-fluid #nav:not(:target) > a:first-of-type, body .header .navbar .container-fluid #nav:target > a:last-of-type {
+    display: flex;
   }
   body .header .navbar .container-fluid #nav:target > .menu {
     display: flex;
     width: 700px;
     position: absolute;
     top: 125px;
-  }
-  body .header .navbar .container-fluid #nav > .menu > ul > li {
-    width: 100%;
-    float: none;
-  }
-}
-body .header .navbar .container-fluid #nav {
-  display: flex;
-  margin-right: 0 !important;
-  margin-left: auto;
-}
-@media (max-width: 1399px) {
-  body .header .navbar .container-fluid #nav {
-    order: 3;
-    margin-left: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -287,6 +259,9 @@ body .header .navbar .container-fluid #nav .menu {
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15);
     margin-left: -120px;
     height: 100vh;
+    display: none;
+    left: 0;
+    right: 0;
   }
 }
 @media (max-width: 991px) {
@@ -300,6 +275,14 @@ body .header .navbar .container-fluid #nav .menu {
     width: calc(100vw + 120px) !important;
     flex-direction: column;
   }
+}
+body .header .navbar .container-fluid #nav .menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+body .header .navbar .container-fluid #nav .menu li:hover ul {
+  display: flex;
 }
 body .header .navbar .container-fluid #nav .menu .menu-list {
   list-style: none;
@@ -343,6 +326,7 @@ body .header .navbar .container-fluid #nav .menu .menu-list .menu-item {
     height: auto;
     margin-bottom: 20px;
     width: 100%;
+    float: none;
   }
 }
 @media (min-width: 1199px) and (max-width: 1399px) {
@@ -760,9 +744,7 @@ body .main .benefits .container .row .list .item {
   background-color: #ffffff;
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15);
   margin: 15px 0;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: auto;
 }
 @media (max-width: 991px) {
   body .main .benefits .container .row .list .item {
@@ -776,16 +758,26 @@ body .main .benefits .container .row .list .item .image img {
   width: 100%;
 }
 body .main .benefits .container .row .list .item .caption {
+  display: flex;
+  flex-direction: column;
   margin: 20px 38px 38px 38px;
+}
+@media (max-width: 1399px) {
+  body .main .benefits .container .row .list .item .caption {
+    margin: 19px 27px 27px 27px;
+    height: 187.5px;
+  }
 }
 @media (max-width: 1199px) {
   body .main .benefits .container .row .list .item .caption {
     margin: 19px 27px 27px 27px;
+    height: 199px;
   }
 }
 @media (max-width: 991px) {
   body .main .benefits .container .row .list .item .caption {
     margin: 20px 38px 38px 38px;
+    height: auto;
   }
 }
 @media (max-width: 767px) {
@@ -801,6 +793,14 @@ body .main .benefits .container .row .list .item .caption .description {
   font-size: var(--benefit-text);
   color: #8D8D8D;
   margin-top: 15px;
+  margin-bottom: 14px;
+}
+body .main .benefits .container .row .list .item .caption .description p {
+  margin-bottom: 0;
+}
+body .main .benefits .container .row .list .item .caption .link {
+  margin-bottom: 0;
+  margin-top: auto;
 }
 body .main .benefits .container .row .list .item .caption .link a {
   text-decoration: none;
@@ -986,44 +986,32 @@ body .main .news .row #recipeCarousel .carousel-inner .carousel-item-next,
 body .main .news .row #recipeCarousel .carousel-inner .carousel-item-prev {
   display: flex;
 }
-@media (max-width: 991px) {
-  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-end.active,
-body .main .news .row #recipeCarousel .carousel-inner .carousel-item-next {
-    transform: translateX(77%);
-  }
-  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-start.active,
-body .main .news .row #recipeCarousel .carousel-inner .carousel-item-prev {
-    transform: translateX(-77%);
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-end.active,
-body .main .news .row #recipeCarousel .carousel-inner .carousel-item-next {
-    transform: translateX(50%);
-  }
-  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-start.active,
-body .main .news .row #recipeCarousel .carousel-inner .carousel-item-prev {
-    transform: translateX(-50%);
-  }
-}
-@media (min-width: 1200px) {
-  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-end.active,
-body .main .news .row #recipeCarousel .carousel-inner .carousel-item-next {
-    transform: translateX(33%);
-  }
-  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-start.active,
-body .main .news .row #recipeCarousel .carousel-inner .carousel-item-prev {
-    transform: translateX(-33%);
-  }
-}
-body .main .news .row #recipeCarousel .carousel-inner .carousel-item-end,
-body .main .news .row #recipeCarousel .carousel-inner .carousel-item-start {
-  transform: translateX(0);
-}
 body .main .news .row #recipeCarousel .carousel-inner .carousel-item {
   background-color: #ffffff;
 }
+@media (min-width: 1200px) {
+  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-end.active, body .main .news .row #recipeCarousel .carousel-inner .carousel-item-next {
+    transform: translateX(33%);
+  }
+  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-start.active, body .main .news .row #recipeCarousel .carousel-inner .carousel-item-prev {
+    transform: translateX(-33%);
+  }
+}
+@media (max-width: 1199px) {
+  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-end.active, body .main .news .row #recipeCarousel .carousel-inner .carousel-item-next {
+    transform: translateX(50%);
+  }
+  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-start.active, body .main .news .row #recipeCarousel .carousel-inner .carousel-item-prev {
+    transform: translateX(-50%);
+  }
+}
 @media (max-width: 991px) {
+  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-end.active, body .main .news .row #recipeCarousel .carousel-inner .carousel-item-next {
+    transform: translateX(77%);
+  }
+  body .main .news .row #recipeCarousel .carousel-inner .carousel-item-start.active, body .main .news .row #recipeCarousel .carousel-inner .carousel-item-prev {
+    transform: translateX(-77%);
+  }
   body .main .news .row #recipeCarousel .carousel-inner .carousel-item > .item:not(:first-child):after {
     content: "";
     position: absolute;
@@ -1039,12 +1027,15 @@ body .main .news .row #recipeCarousel .carousel-inner .carousel-item {
     display: block;
   }
 }
+body .main .news .row #recipeCarousel .carousel-inner .carousel-item-end, body .main .news .row #recipeCarousel .carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
 body .main .news .row #recipeCarousel .carousel-inner .carousel-item .item {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
   width: 33.33333333%;
-  padding: 0 48px;
+  padding: 0 30px;
 }
 @media (max-width: 1199px) {
   body .main .news .row #recipeCarousel .carousel-inner .carousel-item .item {
@@ -1167,15 +1158,22 @@ body .main .news .row #recipeCarousel .side_controls .carousel-control-next-icon
   width: 48px;
 }
 body .main .news .row #recipeCarousel .control-prev {
-  left: 0;
+  left: -30px;
 }
 @media (max-width: 991px) {
   body .main .news .row #recipeCarousel .control-prev {
     opacity: 0;
+    left: -40px;
   }
 }
 body .main .news .row #recipeCarousel .control-next {
-  right: 0;
+  right: -30px;
+}
+@media (max-width: 991px) {
+  body .main .news .row #recipeCarousel .control-next {
+    opacity: 1;
+    right: -15px;
+  }
 }
 @media (max-width: 991px) {
   body .main .news {
@@ -1279,10 +1277,23 @@ body .main .steps .container .row .stages .item .caption .title {
 }
 body .main .steps .container .row .stages .item .caption .desc {
   margin: 0;
+  padding-left: 31px;
+}
+@media (max-width: 991px) {
+  body .main .steps .container .row .stages .item .caption .desc {
+    list-style-type: "•";
+    padding-left: 7px;
+  }
 }
 body .main .steps .container .row .stages .item .caption .desc li {
+  padding-left: 7px;
   margin-bottom: 1em;
   line-height: 1.5em;
+}
+@media (max-width: 991px) {
+  body .main .steps .container .row .stages .item .caption .desc li {
+    padding-left: 7px;
+  }
 }
 body .main .steps .container .row .stages .item .caption .desc li:last-child {
   margin-bottom: 0;

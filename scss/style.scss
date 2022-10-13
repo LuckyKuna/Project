@@ -1,5 +1,9 @@
 @import "fonts";
 
+$blue: #2a42cc;
+$black: #181818;
+$white: #ffffff;
+
 @mixin install {
     width: 201px;
     height: 53px;
@@ -33,9 +37,7 @@
     }
 }
 
-$blue: #2a42cc;
-$black: #181818;
-$white: #ffffff;
+
 
 :root {
     --font-size: 15px; //10 
@@ -50,8 +52,8 @@ $white: #ffffff;
     --benefit-text: 14px; //11
     --learn-more: 15px;
 
-    --card-title: 27px; //17
-    --card-button: 22px; //18
+    --card-title: 22px; //17
+    --card-button: 18px; //18
 
     --news-title: 22px; //17
     --news-date: 14px; //10
@@ -78,9 +80,6 @@ $white: #ffffff;
         --benefit-title: 22px;
         --benefit-text: 13.25px;
 
-        --card-title: 24.5px;
-        --card-button: 21px;
-
         --news-title: 20.75px;
         --news-date: 13px;
 
@@ -99,9 +98,6 @@ $white: #ffffff;
 
         --benefit-title: 21px;
         --benefit-text: 12.5px;
-
-        --card-title: 22px;
-        --card-button: 20px;
 
         --news-title: 19.5px;
         --news-date: 12px;
@@ -122,8 +118,7 @@ $white: #ffffff;
         --benefit-title: 20px;
         --benefit-text: 11.75px;
 
-        --card-title: 19.5px;
-        --card-button: 19px;
+        --card-title: 17px;
 
         --news-title: 18.25px;
         --news-date: 11px;
@@ -143,9 +138,6 @@ $white: #ffffff;
 
         --benefit-title: 19px;
         --benefit-text: 11px;
-
-        --card-title: 17px;
-        --card-button: 18px;
 
         --news-title: 17px;
         --news-date: 10px;

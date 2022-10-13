@@ -21,54 +21,47 @@
                 display: flex
             }
 
-            @media (max-width: 991px) {
-
-                .carousel-item-end.active,
-                .carousel-item-next {
-                    transform: translateX(77%)
-                }
-
-                .carousel-item-start.active,
-                .carousel-item-prev {
-                    transform: translateX(-77%)
-                }
-            }
-
-            @media (min-width: 992px) and (max-width: 1199px) {
-
-                .carousel-item-end.active,
-                .carousel-item-next {
-                    transform: translateX(50%)
-                }
-
-                .carousel-item-start.active,
-                .carousel-item-prev {
-                    transform: translateX(-50%)
-                }
-            }
-
-            @media (min-width: 1200px) {
-
-                .carousel-item-end.active,
-                .carousel-item-next {
-                    transform: translateX(33%)
-                }
-
-                .carousel-item-start.active,
-                .carousel-item-prev {
-                    transform: translateX(-33%)
-                }
-            }
-
-            .carousel-item-end,
-            .carousel-item-start {
-                transform: translateX(0)
-            }
-
             .carousel-item {
                 background-color: $white;
 
+                @media (min-width: 1200px) {
+
+                    &-end.active,
+                    &-next {
+                        transform: translateX(33%)
+                    }
+
+                    &-start.active,
+                    &-prev {
+                        transform: translateX(-33%)
+                    }
+                }
+
+                @media (max-width: 1199px) {
+
+                    &-end.active,
+                    &-next {
+                        transform: translateX(50%)
+                    }
+
+                    &-start.active,
+                    &-prev {
+                        transform: translateX(-50%)
+                    }
+                }
+
                 @media (max-width: 991px) {
+
+                    &-end.active,
+                    &-next {
+                        transform: translateX(77%)
+                    }
+
+                    &-start.active,
+                    &-prev {
+                        transform: translateX(-77%)
+                    }
+
                     &>.item:not(:first-child):after {
                         content: '';
                         position: absolute;
@@ -87,12 +80,17 @@
                     }
                 }
 
+                &-end,
+                &-start {
+                    transform: translateX(0)
+                }
+
                 .item {
                     display: flex;
                     flex-direction: column;
                     flex: 0 0 auto;
                     width: 33.33333333%;
-                    padding: 0 48px;
+                    padding: 0 30px;
 
                     @media (max-width: 1199px) {
                         width: 50%;
@@ -226,15 +224,23 @@
         }
 
         .control-prev {
-            left: 0;
+            left: -30px;
 
             @media (max-width: 991px) {
                 opacity: 0;
+                left: -40px;
+
             }
         }
 
         .control-next {
-            right: 0;
+            right: -30px;
+
+            @media (max-width: 991px) {
+                opacity: 1;
+                right: -15px;
+
+            }
         }
     }
 }
