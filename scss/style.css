@@ -481,12 +481,12 @@ body .main {
 body .main .promo {
   position: relative;
   margin-bottom: 111px;
-  height: 852px;
 }
 body .main .promo .row {
   position: relative;
   height: 100%;
   align-items: center;
+  justify-content: center;
 }
 @media (max-width: 991px) {
   body .main .promo .row {
@@ -504,7 +504,9 @@ body .main .promo .row .data {
 @media (max-width: 991px) {
   body .main .promo .row .data {
     align-self: end;
-    top: 0%;
+    top: unset;
+    position: absolute;
+    bottom: 0;
     padding: 0;
     width: 100%;
   }
@@ -522,11 +524,14 @@ body .main .promo .row .data .title h1 {
   font-family: Days One;
   font-size: var(--promo-title);
   white-space: nowrap;
+  margin-bottom: 0;
 }
 @media (max-width: 991px) {
   body .main .promo .row .data .title h1 {
     color: #ffffff;
     white-space: normal;
+    line-height: 0.8;
+    margin-bottom: 10px;
   }
   body .main .promo .row .data .title h1 :first-child {
     display: none;
@@ -548,6 +553,7 @@ body .main .promo .row .data .sub_title {
     color: #ffffff;
     margin-bottom: 23px;
     margin-top: 0;
+    line-height: 1.5;
   }
 }
 body .main .promo .row .data .action {
@@ -602,39 +608,39 @@ body .main .promo .row .data .action .play {
 body .main .promo .row .image {
   z-index: 1;
   height: 100%;
-  position: absolute;
-  right: 0%;
+  max-width: 250%;
+  position: relative;
   width: 54.33333333%;
 }
 @media (max-width: 991px) {
   body .main .promo .row .image {
-    width: 100%;
+    width: 110%;
   }
   body .main .promo .row .image:after {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    width: 608.5px;
+    width: 100%;
     height: 100%;
     display: inline-block;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 60%);
   }
 }
-@media (max-width: 574px) {
+@media (max-width: 575px) {
   body .main .promo .row .image {
-    right: 10%;
+    height: 511px;
+    width: auto;
   }
 }
 body .main .promo .row .image .promo_img {
-  position: absolute;
-  height: 100%;
-  bottom: 0%;
+  position: relative;
   z-index: -2;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   body .main .promo .row .image .promo_img {
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
   }
 }
 body .main .promo .row .image .list_service {
@@ -643,28 +649,26 @@ body .main .promo .row .image .list_service {
   margin-left: 20px;
   width: 100%;
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   body .main .promo .row .image .list_service {
     display: none;
   }
 }
-body .main .promo .row .image .list_service:hover .list-unstyled:first-child {
-  opacity: 1;
+body .main .promo .row .image .list_service:hover .list-unstyled .item {
+  background-color: #2a42cc;
+  cursor: pointer;
 }
-body .main .promo .row .image .list_service:hover .list-unstyled:last-child {
-  opacity: 0;
+body .main .promo .row .image .list_service:hover .list-unstyled .item .icon svg path {
+  fill: #ffffff;
+}
+body .main .promo .row .image .list_service:hover .list-unstyled .item .text {
+  display: block !important;
 }
 body .main .promo .row .image .list_service .list-unstyled {
   z-index: 9;
   position: absolute;
   bottom: 0;
   transition: 0.5s;
-}
-body .main .promo .row .image .list_service .list-unstyled:first-child {
-  opacity: 0;
-}
-body .main .promo .row .image .list_service .list-unstyled:last-child {
-  opacity: 1;
 }
 body .main .promo .row .image .list_service .list-unstyled .item {
   display: flex;
@@ -673,10 +677,14 @@ body .main .promo .row .image .list_service .list-unstyled .item {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 50vh;
-  background-color: #2a42cc;
+  background-color: #ffffff;
 }
 body .main .promo .row .image .list_service .list-unstyled .item:nth-child(1) {
   margin: 20px 0px 24px 20px;
+}
+body .main .promo .row .image .list_service .list-unstyled .item:nth-child(1) .icon {
+  width: 31px;
+  height: 31px;
 }
 body .main .promo .row .image .list_service .list-unstyled .item:nth-child(2) {
   margin: 0px 0px 48px 74px;
@@ -684,11 +692,20 @@ body .main .promo .row .image .list_service .list-unstyled .item:nth-child(2) {
 body .main .promo .row .image .list_service .list-unstyled .item:nth-child(2) .text {
   font-size: 14px;
 }
+body .main .promo .row .image .list_service .list-unstyled .item:nth-child(2) .icon {
+  width: 43px;
+  height: 43px;
+}
 body .main .promo .row .image .list_service .list-unstyled .item:nth-child(3) {
   margin-left: 88px;
+  background-color: #2a42cc;
 }
 body .main .promo .row .image .list_service .list-unstyled .item:nth-child(3) .text {
   font-size: 18px;
+}
+body .main .promo .row .image .list_service .list-unstyled .item:nth-child(3) .icon {
+  width: 57px;
+  height: 57px;
 }
 body .main .promo .row .image .list_service .list-unstyled .item:nth-child(4) {
   margin: 48px 0px 0px 74px;
@@ -696,18 +713,32 @@ body .main .promo .row .image .list_service .list-unstyled .item:nth-child(4) {
 body .main .promo .row .image .list_service .list-unstyled .item:nth-child(4) .text {
   font-size: 14px;
 }
+body .main .promo .row .image .list_service .list-unstyled .item:nth-child(4) .icon {
+  width: 43px;
+  height: 43px;
+}
 body .main .promo .row .image .list_service .list-unstyled .item:nth-child(5) {
   margin: 24px 0px 20px 20px;
+}
+body .main .promo .row .image .list_service .list-unstyled .item:nth-child(5) .icon {
+  width: 31px;
+  height: 31px;
+}
+body .main .promo .row .image .list_service .list-unstyled .item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vh;
 }
 body .main .promo .row .image .list_service .list-unstyled .item .text {
   margin: 0 20px 0 10px;
   font-weight: 500;
   font-size: 11px;
   color: #ffffff;
+  display: none;
 }
 @media (max-width: 991px) {
   body .main .promo {
-    height: 58vh;
     margin-bottom: 172px;
   }
 }
@@ -1573,6 +1604,10 @@ body .footer .container .row .footer_nav {
 }
 body .footer .container .row .footer_nav:nth-child(4) a {
   font-weight: 700 !important;
+}
+body .footer .container .row .footer_nav:nth-child(4) a svg {
+  width: 28px;
+  margin-right: 8px;
 }
 @media (max-width: 575px) {
   body .footer .container .row .footer_nav:nth-child(4) {

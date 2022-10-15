@@ -186,11 +186,9 @@ body {
         .promo {
             position: relative;
             margin-bottom: 111px;
-            height: 852px;
             @import "promo";
 
             @media (max-width: 991px) {
-                height: 58vh;
                 margin-bottom: 172px;
             }
         }
@@ -243,8 +241,8 @@ body {
             background-color: $black;
             @import "steps";
 
-                        @media (max-width: 991px) {
-            margin-top: 127px;
+            @media (max-width: 991px) {
+                margin-top: 127px;
             }
         }
 
